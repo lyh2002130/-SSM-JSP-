@@ -1,7 +1,7 @@
 # 基于SSM+JSP的花店项目
 
 #### 介绍
-基于Idea开发的SSM花店项目，非常适合实战练习项目和毕业设计项目
+基于Idea开发的有间花店项目，非常适合实战练习项目和毕业设计项目
 
 #### 项目技术
 Spring+ SpringMVC + Mybatis + JSP +Maven
