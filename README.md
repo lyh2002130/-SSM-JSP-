@@ -29,3 +29,4 @@ Spring+ SpringMVC + Mybatis + JSP +Maven
 wx：lyh38854
 qq：1816026989
 可提供项目源码和SQL文件
+包括部署和运行教程
