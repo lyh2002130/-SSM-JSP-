@@ -1,37 +1,23 @@
 # 基于SSM+JSP的花店项目
 
 #### 介绍
-基于Idea开发的SSM花店项目，文章包含源码，数据库文件
+基于Idea开发的SSM花店项目，适合实战练习项目和毕业设计项目
+联系博主可提供项目源码和SQL文件
 
-#### 软件架构
-软件架构说明
+#### 项目技术
+Spring+ SpringMVC + Mybatis + JSP +Maven
 
 
 #### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  Mysql5.7
+2.  Maven
+3.  JDK1.8
 
 #### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  运行SQl文件创建数据库
+2.  配置一下Tomcat服务器
+3.  然后直接运行
 
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 运行效果图展示
+登录页面：![输入图片说明](3fe2e533983b4f509b567ce276f00cd1.png)
