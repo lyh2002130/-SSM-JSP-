@@ -26,6 +26,6 @@ Spring+ SpringMVC + Mybatis + JSP +Maven
 后台管理页面：![输入图片说明](b5702db7d87440f9bb6e0c3e96315b89.png)
 
 #### 联系方式：
-wx:lyh38854
-qq:1816026989
+wx：lyh38854
+qq：1816026989
 可提供项目源码和SQL文件
