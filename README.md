@@ -1,34 +1,32 @@
 # 基于SSM+JSP的花店项目
 
 #### 介绍
-基于Idea开发的SSM+JSP花店项目，适合毕业设计和实战练习项目
+基于Idea开发的有间花店项目，非常适合实战练习项目和毕业设计项目
 
+#### 项目技术
+Spring+ SpringMVC + Mybatis + JSP +Maven
 
 #### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  Mysql5.7
+2.  Maven
+3.  JDK1.8
 
 #### 使用说明
+1.  运行SQl文件创建数据库
+2.  配置一下Tomcat服务器
+3.  然后直接运行
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 运行效果图展示
+登录页面：![输入图片说明](img/3fe2e533983b4f509b567ce276f00cd1.png)
+首页:![输入图片说明](img/9c06c94ddbe74cc3b2a687349bede502.png)
+商品详情页:![输入图片说明](img/328fc236a2cc4e97ac7198831114ba27.png)
+商品分类:![输入图片说明](img/779fe680e610404da4fc46cf6417f31c.png)
+购物车:![输入图片说明](img/3123cff26de64551aeda59fb12f56368.png)
+我的订单:![输入图片说明](img/074b75dc55be496ea9382411e579e4e0.png)
+后台管理页面：![输入图片说明](img/b5702db7d87440f9bb6e0c3e96315b89.png)
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 联系方式：
+当前代码只是部分源码
+如需项目全部源码和数据库文件请 **添加博主的wx或qq** （包括部署和运行教程）
+ **wx：lyh38854** 
+ **qq：1816026989** 
