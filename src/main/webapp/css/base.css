@@ -1,0 +1,160 @@
+.wrap {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.tab {
+	width: 100%;
+	display: flex;
+	height: 100px;
+	color: rgb(224, 195, 142);
+	font-weight: bold;
+	line-height: 90px;
+	font-family: "LiSu", "PMingLiU", "STSong";
+	text-align: center;
+	font-size: 25px;
+	letter-spacing: 1.2em
+}
+
+/* 个人中心 */
+.tab1 {
+	background: rgb(248, 240, 169);
+	flex: 1;
+	padding: 10px 10px 0 0;
+	margin-right: 20px;
+	border: 1px lightpink;
+	border-radius: 70% 70% 0 0;
+}
+
+.photo {
+	width: 200px;
+	height: 200px;
+	border: transparent;
+	border-radius: 50%;
+	background: url(../img/home/head.jpg);
+	text-align: center;
+	margin: 50px
+}
+
+.photo::after {
+	content: "VIP";
+	color: red;
+	font-weight: bolder;
+	margin-left: 150px;
+	font-size: 29px;
+	background: gold;
+	position: relative;
+	top: 5px;
+	right: 3px;
+}
+
+.table {
+	text-align: center;
+}
+
+.info {
+	text-align: center;
+	width: 1100px;
+	vertical-align: center;
+	padding: 70px
+}
+
+.info input {
+	background: #ccc;
+	border: none;
+	font-size: 25px;
+	text-align: center;
+	height: 35px;
+	font-family: "STKaiti";
+	margin-right: 10px;
+	border-radius: 25%;
+}
+
+.info button {
+	font-family: "lisu";
+	border: 1px solid gray;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 2px;
+	background: transparent
+}
+
+/* 我的订单 */
+.tab2 {
+	background: lightblue;
+	flex: 1;
+	padding: 10px 10px 0 0;
+	margin-right: 20px;
+	border: 1px lightblue;
+	border-radius: 70% 70% 0 0;
+}
+
+.clearfix {
+	width: 100%;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.clearfix li {
+	color: black !important;
+	text-decoration: none;
+	text-align: center;
+}
+
+.clearfix .li1, .clearfix .li2 {
+	width: 1000px;
+	overflow: hidden;
+	border: 5px solid #ddd;
+	height: 500px;
+	padding: 100px 25px 10px 0;
+	margin: 25px;
+	float: left;
+}
+
+.left {
+	width: 280px;
+	display: inline-block;
+	float: left;
+}
+
+.right {
+	display: inline-block;
+	margin: 0
+}
+
+.img1, .img2 {
+	float: left;
+	width: 70px;
+	height: 50px;
+}
+
+.product1, .product2 {
+	width: 200px;
+	height: 300px;
+	background: salmon;
+	top: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.text {
+	float: left;
+	background: forestgreen;
+	padding: 2px;
+	border-radius: 30px;
+	font-weight: bold;
+	color: white;
+	top: 10px;
+	font-size: 20px;
+}
+
+.content1 {
+	background: rgb(248, 240, 169);
+	height: 100%
+}
+
+.content2 {
+	background: lightblue;
+	height: 100%;
+	display: none
+}

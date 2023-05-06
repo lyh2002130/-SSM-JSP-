@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.mapper.IndexMapper">
+    <select id="FindproductListByisHot" resultType="Product">
+        SELECT * FROM tb_product  WHERE is_hot=1 ORDER BY pdate DESC LIMIT 0,8
+    </select>
+    <select id="FindproductListByTime" resultType="Product">
+        SELECT * FROM tb_product ORDER BY pdate DESC LIMIT 0,8
+    </select>
+    <select id="FindproductListBypbargain" resultType="Product">
+        SELECT * FROM tb_product WHERE `pbargain`=1 LIMIT 0,8
+    </select>
+    <resultMap id="cname" type="Product">
+        <id property="pid" column="pid"/>
+        <result property="pname" column="pname"/>
+        <result property="market_price" column="market_price"/>
+        <result property="shop_price" column="shop_price"/>
+        <result property="pimage" column="pimage"/>
+        <result property="pmaterial" column="pmaterial"/>
+        <result property="pdate" column="pdate"/>
+        <result property="is_hot" column="is_hot"/>
+        <result property="pdesc" column="pdesc"/>
+        <result property="pflag" column="pflag"/>
+        <result property="pbargain" column="pbargain"/>
+        <result property="num" column="num"/>
+        <result property="cid" column="cid"/>
+        <association property="category" javaType="Category">
+            <id property="cid" column="cid"/>
+            <result property="cname" column="cname"/>
+        </association>
+    </resultMap>
+    <select id="FindProductItemByPid" resultMap="cname" >
+        SELECT * FROM tb_product p,`tb_category` c WHERE p.`cid`=c.`cid` AND p.pid=#{pid}
+    </select>
+</mapper>

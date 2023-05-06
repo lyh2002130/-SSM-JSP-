@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.mapper.UserMapper">
+    <select id="getAdminByNameAndPass" resultType="Admin">
+        select * from tb_admin where username=#{username} and password=#{password}
+    </select>
+
+    <select id="getUserByNameAndPass" resultType="User">
+        select * from tb_user where username=#{username} and password=#{password}
+    </select>
+
+    <select id="getCartItemByUid" resultType="CartItem">
+        SELECT * FROM `tb_cart_item` WHERE `uid`=#{uid}
+    </select>
+
+    <select id="getProductByPid" resultType="Product">
+        select * from tb_product where pid=#{pid}
+    </select>
+
+    <delete id="deleteCartItem" parameterType="int">
+        delete from tb_cart_item where pid = #{pid} and `uid`=#{uid}
+    </delete>
+
+    <delete id="deleteAllCartItems" parameterType="int">
+        delete from tb_cart_item where uid=#{uid}
+    </delete>
+
+    <update id="updatePnum">
+        update tb_cart_item set pnum=#{pnum} where pid=#{pid}
+    </update>
+
+    <update id="updateTotal">
+        update tb_cart_item set subTotal=#{subTotal} where pid=#{pid}
+    </update>
+
+    <insert id="addCartItem">
+        insert into tb_cart_item(pid,uid,subTotal,pnum) value(#{pid},#{uid},#{subTotal},#{pnum})
+    </insert>
+
+    <update id="updateCartItemPnum">
+        UPDATE `tb_cart_item` SET pnum=pnum+#{pnum},subTotal=subTotal+#{subTotal} where pid=#{pid}
+    </update>
+
+    <insert id="addOrder">
+        insert into tb_order(uid,onum,receiver,address,tel,time,ostate,ototal) value(#{uid},#{onum},#{receiver},#{address},#{tel},#{time},#{ostate},#{ototal})
+    </insert>
+
+    <select id="getCartItemByPid" resultType="cartitem">
+        SELECT * FROM `tb_cart_item` WHERE `pid`=#{pid} and `uid`=#{uid}
+    </select>
+
+    <insert id="addOrderItem">
+        insert into tb_order_item(id,pay_count,send_count,order_id,pid) value(#{id},#{pay_count},0,#{order_id},#{pid})
+    </insert>
+
+    <select id="getOrderByOnum" resultType="Order">
+        SELECT * FROM `tb_order` WHERE onum=#{onum}
+    </select>
+
+    <select id="getOrderByOid" resultType="Order">
+        SELECT * FROM `tb_order` WHERE oid=#{oid}
+    </select>
+
+    <update id="lessCountByUid">
+        UPDATE tb_user SET count=count-#{subTotal} where uid=#{uid}
+    </update>
+
+    <update id="updateOstate">
+        UPDATE tb_order SET ostate = 1 where onum = #{onum}
+    </update>
+
+    <insert id="addUser">
+        insert into tb_user(username,password,name,email,telephone,birthday,sex,count,address) value(#{username},#{password},#{name},#{email},#{telephone},#{birthday},#{sex},10000,#{address})
+    </insert>
+
+    <select id="getUserByTelephone" resultType="User">
+        select * from tb_user where telephone=#{telephone}
+    </select>
+
+    <select id="getUserByUsername" resultType="User">
+        select * from tb_user where username=#{username}
+    </select>
+
+    <select id="getOrdersByUid" resultType="OrderVo">
+        select * from tb_order where uid=#{uid} order by oid desc
+    </select>
+
+    <select id="getOrderItemsByOid" resultType="OrderItem">
+        select * from tb_order_item where order_id=#{oid}
+    </select>
+
+    <update id="updateOstate1">
+        UPDATE tb_order SET ostate = #{ostate} where oid = #{oid} and uid=#{uid}
+    </update>
+
+    <update id="updateOstate2">
+        UPDATE tb_order SET ostate = 1 where oid = #{oid}
+    </update>
+
+    <update id="addCount">
+        UPDATE tb_user SET count = count+#{count} where uid = #{uid}
+    </update>
+
+    <update id="lessNumByPid">
+        UPDATE tb_product SET num = num-#{num} where pid = #{pid}
+    </update>
+
+    <delete id="deleteOrderItem">
+        delete from tb_order_item where order_id=#{oid}
+    </delete>
+
+    <delete id="deleteOrder">
+        delete from tb_order where onum=#{onum}
+    </delete>
+
+    <delete id="deleteOrder1">
+        delete from tb_order where oid=#{oid}
+    </delete>
+</mapper>

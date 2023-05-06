@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	                       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	                       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<!-- 注解包扫描-->
+    <context:component-scan base-package="com.itheima.mapper,com.itheima.service"/>
+
+<!-- 连接德鲁伊数据文件-->
+    <context:property-placeholder location="classpath:druid.properties"/>
+
+<!-- 数据库连接池-->
+<!--    org.springframework.jdbc.datasource.DriverManagerDataSource-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${druid.driverClassName}"/>
+        <property name="url" value="${druid.url}"/>
+        <property name="username" value="${druid.username}"/>
+        <property name="password" value="${druid.password}"/>
+    </bean>
+
+<!-- sql会话工程Bean-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sessionFactory">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="typeAliasesPackage" value="com.itheima.pojo"/>
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <value>
+                            <!--配置PageHelper-->
+                            offsetAsPageNum=true
+                            reasonable=true
+                            rowBoundsWithCount=true
+                            pageSizeZero=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+
+    </bean>
+
+<!-- 用户动态代理扫描：查找类路径下的映射器-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" id="configurer">
+        <property name="basePackage" value="com.itheima.mapper"/>
+    </bean>
+
+<!-- 创建事物管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+<!--  开启事物注解-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>
