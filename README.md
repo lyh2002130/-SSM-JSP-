@@ -29,4 +29,4 @@ Spring+ SpringMVC + Mybatis + JSP +Maven
 商品分类:![输入图片说明](img/779fe680e610404da4fc46cf6417f31c.png)
 购物车:![输入图片说明](img/3123cff26de64551aeda59fb12f56368.png)
 我的订单:![输入图片说明](img/074b75dc55be496ea9382411e579e4e0.png)
-后台管理页面：![输入图片说明](img/b5702db7d87440f9bb6e0c3e96315b89.png)
+后台管理页面：![输入图片说明](img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230515171420.png)
